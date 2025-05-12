@@ -5,6 +5,10 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## curso
 >- https://www.udemy.com/course/react-js-para-principiantes-desde-cero-curso-gratuito/learn/lecture/30520528#overview
 
+### pruebas unitarias
+>- npm test -- --watchAll
+
+
 ## Sección 1: Preparando nuestro entorno de trabajo
 
 
