@@ -2,16 +2,16 @@ import imageRickMorty from "./img/rick-morty.png";
 
 import "./App.css";
 import { useState } from "react";
-import Characters from "./Components/Characters";
+import Characters from "./presentation/Components/Characters";
+import { GetAllRickAndMortyUseCase } from "./application/users/usecases/getall-rickandmorty.usecase"; 
 
 function App() {
   const [characters, setCharacters] = useState(null);
 
   const reqApi = async () => {
-    const api = await fetch("https://rickandmortyapi.com/api/character");
-
-    const charactersApi = await api.json();
-    setCharacters(charactersApi.results);
+    const api = new GetAllRickAndMortyUseCase();
+    const results = await api.execute();
+    setCharacters(results);
   };
 
   return (
